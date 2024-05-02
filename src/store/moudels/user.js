@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { http, setToken, getToken } from '@/utils'
+import { request, setToken, getToken } from '@/utils'
 const userStore = createSlice({
   name: 'user',
   // 数据状态
@@ -24,7 +24,7 @@ const userReducer = userStore.reducer
 // 异步方法封装
 const fetchLogin = (loginForm) => {
   return async (dispatch) => {
-    const res = await http.post('/authorizations', loginForm)
+    const res = await request.post('/authorizations', loginForm)
     dispatch(setUserInfo(res.data.token))
   }
 }
