@@ -1,4 +1,8 @@
 import { http } from './request'
+import { setToken, getToken, removeToken } from './token'
 export {
-    http
+    http,
+    setToken, 
+    getToken, 
+    removeToken
 }
