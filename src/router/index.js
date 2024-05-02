@@ -4,7 +4,7 @@ import Login from "@/pages/Login";
 
 const router = createBrowserRouter([
     {
-        path:"/Layout",
+        path:"/layout",
         element: <Layout/>
     },
     {
