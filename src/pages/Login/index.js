@@ -13,7 +13,7 @@ const Login = () => {
   const onFinish = async (formValue) => {
     console.log(formValue)
     await dispatch(fetchLogin(formValue))
-    navgate('/layout')
+    navgate('/')
     message.success('登录成功')
   }
   return (
