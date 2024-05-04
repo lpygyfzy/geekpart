@@ -52,9 +52,12 @@ import { createArticleAPI, getChannelAPI } from '@/apis/article'
         createArticleAPI(data)
     }
 
+    /**定义一个存放图片的setData */
+    const [imageList, setImageList] = useState([])
     /**定义上传图片的函数 */
     const onUploadChange = (info) => {
         console.log('正在上传中',info);
+        setImageList(info.fileList)
     }
     return (
       <div className="publish">
